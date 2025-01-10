@@ -7,9 +7,16 @@
 </head>
 <body>
     <h1>Upload Image</h1>
-    <form action="/upload" method="post" enctype="multipart/form-data">
+    <form action="/upload_image" method="post" enctype="multipart/form-data">
         <label for="image">Select an image:</label>
         <input type="file" name="image" id="image" required>
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <h1>Upload Video</h1>
+    <form action="/upload_video" method="post" enctype="multipart/form-data">
+        <label for="video">Select an image:</label>
+        <input id="video" type="file" name="video" required>
         <button type="submit">Upload</button>
     </form>
 </body>
