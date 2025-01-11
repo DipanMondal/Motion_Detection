@@ -40,12 +40,14 @@ def success():
                 # Read the image directly from the file object
                 file_bytes = np.frombuffer(file.read(), np.uint8)
                 frame = cv2.imdecode(file_bytes, cv2.IMREAD_COLOR)
+                frame = cv2.resize(frame,(640,640))
 
                 if frame is None:
                     return jsonify({"error": "Unable to process the image file"}), 400
 
                 # Process the image (optional)
                 img_shape = frame.shape  # Example: (height, width, channels)
+                print(img_shape)
 
                 # Detect humans using YOLO
                 detections = ym.detect(frame)
