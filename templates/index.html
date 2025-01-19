@@ -1,23 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Upload Image</title>
-</head>
-<body>
-    <h1>Upload Image</h1>
-    <form action="/upload_image" method="post" enctype="multipart/form-data">
-        <label for="image">Select an image:</label>
-        <input type="file" name="image" id="image" required>
-        <button type="submit">Upload</button>
-    </form>
-    <br>
-    <h1>Upload Video</h1>
-    <form action="/upload_video" method="post" enctype="multipart/form-data">
-        <label for="video">Select an image:</label>
-        <input id="video" type="file" name="video" required>
-        <button type="submit">Upload</button>
-    </form>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upload Files</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+        padding: 20px;
+      }
+      .container {
+        max-width: 600px;
+        margin: auto;
+        background: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .btn-primary {
+        width: 100%;
+      }
+      footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Upload Files</h1>
+      <form action="/upload_image" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="image">Select an image:</label>
+          <input
+            type="file"
+            name="image"
+            id="image"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-upload"></i> Upload Image
+        </button>
+      </form>
+      <br />
+      <form action="/upload_video" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+          <label for="video">Select a video:</label>
+          <input
+            id="video"
+            type="file"
+            name="video"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-upload"></i> Upload Video
+        </button>
+      </form>
+      <br />
+      <form
+        action="/upload_forklift_image"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="forklift_image">Select a forklift image:</label>
+          <input
+            type="file"
+            name="forklift_image"
+            id="forklift_image"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-upload"></i> Upload Forklift Image
+        </button>
+      </form>
+      <br />
+      <form
+        action="/upload_forklift_video"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="forklift_video">Select a forklift video:</label>
+          <input
+            id="forklift_video"
+            type="file"
+            name="forklift_video"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-upload"></i> Upload Forklift Video
+        </button>
+      </form>
+      <br />
+      <form
+        action="/upload_combined_image"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="combined_image"
+            >Select an image for combined detection:</label
+          >
+          <input
+            type="file"
+            name="image"
+            id="combined_image"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-upload"></i> Upload Combined Image
+        </button>
+      </form>
+      <br />
+      <form
+        action="/upload_combined_video"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <div class="form-group">
+          <label for="combined_video"
+            >Select a video for combined detection:</label
+          >
+          <input
+            id="combined_video"
+            type="file"
+            name="video"
+            class="form-control"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <i class="fas fa-upload"></i> Upload Combined Video
+        </button>
+      </form>
+    </div>
+    <footer>
+      <p>&copy; 2023 Motion Detection. All rights reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
 </html>
